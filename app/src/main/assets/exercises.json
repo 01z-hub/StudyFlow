@@ -1,0 +1,365 @@
+{
+  "sections": [
+    {
+      "sectionId": "positive-negative",
+      "questions": [
+        {
+          "id": "pn-1",
+          "prompt": "温度从 3℃ 降到零下 2℃，零下 2℃可以表示为？",
+          "options": ["2", "-2", "3", "-3"],
+          "correctOptionIndex": 1,
+          "explanation": "低于 0℃ 的温度使用负数表示，所以零下 2℃记作 -2℃。"
+        },
+        {
+          "id": "pn-2",
+          "prompt": "如果向东走 5 米记作 +5 米，那么向西走 4 米应记作？",
+          "options": ["+4 米", "-4 米", "+5 米", "-5 米"],
+          "correctOptionIndex": 1,
+          "explanation": "向东与向西方向相反，已规定向东为正，因此向西为负。"
+        }
+      ]
+    },
+    {
+      "sectionId": "number-axis",
+      "questions": [
+        {
+          "id": "na-1",
+          "prompt": "数轴上位于原点右侧 3 个单位长度的点表示？",
+          "options": ["-3", "-1", "1", "3"],
+          "correctOptionIndex": 3,
+          "explanation": "数轴右侧表示正数，距离原点 3 个单位的点是 3。"
+        },
+        {
+          "id": "na-2",
+          "prompt": "在数轴上，-2 和 1 之间的距离是多少？",
+          "options": ["1", "2", "3", "4"],
+          "correctOptionIndex": 2,
+          "explanation": "两点距离为 |1-(-2)|=3。"
+        }
+      ]
+    },
+    {
+      "sectionId": "absolute-value",
+      "questions": [
+        {
+          "id": "av-1",
+          "prompt": "|-7| 的值是？",
+          "options": ["-7", "0", "7", "14"],
+          "correctOptionIndex": 2,
+          "explanation": "绝对值表示到原点的距离，|-7|=7。"
+        },
+        {
+          "id": "av-2",
+          "prompt": "绝对值等于 4 的数有几个？",
+          "options": ["0 个", "1 个", "2 个", "4 个"],
+          "correctOptionIndex": 2,
+          "explanation": "4 和 -4 到原点的距离都为 4。"
+        }
+      ]
+    },
+    {
+      "sectionId": "monomial",
+      "questions": [
+        {
+          "id": "mo-1",
+          "prompt": "下列式子中，哪一个是单项式？",
+          "options": ["x+1", "3x²", "a-b", "1/x"],
+          "correctOptionIndex": 1,
+          "explanation": "3x² 是数字与字母幂的乘积，是单项式。"
+        },
+        {
+          "id": "mo-2",
+          "prompt": "单项式 -5ab² 的系数是？",
+          "options": ["5", "-5", "2", "-2"],
+          "correctOptionIndex": 1,
+          "explanation": "单项式中的数字因数是系数，符号也属于系数。"
+        }
+      ]
+    },
+    {
+      "sectionId": "polynomial",
+      "questions": [
+        {
+          "id": "po-1",
+          "prompt": "多项式 2x²+3x-1 一共有几项？",
+          "options": ["1 项", "2 项", "3 项", "4 项"],
+          "correctOptionIndex": 2,
+          "explanation": "用加减号分隔后得到 2x²、3x、-1 三项。"
+        },
+        {
+          "id": "po-2",
+          "prompt": "合并同类项：2x+3x 的结果是？",
+          "options": ["5", "5x", "6x", "5x²"],
+          "correctOptionIndex": 1,
+          "explanation": "字母部分相同，系数相加得到 5x。"
+        }
+      ]
+    },
+    {
+      "sectionId": "number-patterns",
+      "questions": [
+        {
+          "id": "np-1",
+          "prompt": "数列 2、5、8、11 的下一个数是？",
+          "options": ["12", "13", "14", "15"],
+          "correctOptionIndex": 2,
+          "explanation": "相邻两项都增加 3，因此下一项是 14。"
+        },
+        {
+          "id": "np-2",
+          "prompt": "第 n 个偶数可以表示为？",
+          "options": ["n+2", "2n", "2n+1", "n²"],
+          "correctOptionIndex": 1,
+          "explanation": "正偶数依次是 2×1、2×2、2×3，因此第 n 个是 2n。"
+        }
+      ]
+    },
+    {
+      "sectionId": "operations-strategy",
+      "questions": [
+        {
+          "id": "os-1",
+          "prompt": "计算 25×16 时，哪种拆分更便于心算？",
+          "options": ["25×(10+6)", "(100÷4)×16", "25×8×8", "25+16"],
+          "correctOptionIndex": 1,
+          "explanation": "25=100÷4，先算 16÷4 再乘 100 更简便。"
+        },
+        {
+          "id": "os-2",
+          "prompt": "计算 99×7 的简便结果是？",
+          "options": ["686", "693", "700", "706"],
+          "correctOptionIndex": 1,
+          "explanation": "99×7=(100-1)×7=700-7=693。"
+        }
+      ]
+    },
+    {
+      "sectionId": "model-equation",
+      "questions": [
+        {
+          "id": "me-1",
+          "prompt": "一个数的 3 倍是 18，设这个数为 x，方程是？",
+          "options": ["x+3=18", "3x=18", "x÷3=18", "18x=3"],
+          "correctOptionIndex": 1,
+          "explanation": "“一个数的 3 倍”表示 3x。"
+        },
+        {
+          "id": "me-2",
+          "prompt": "方程 x+5=12 的解是？",
+          "options": ["5", "6", "7", "17"],
+          "correctOptionIndex": 2,
+          "explanation": "等式两边同时减 5，得到 x=7。"
+        }
+      ]
+    },
+    {
+      "sectionId": "equation-application",
+      "questions": [
+        {
+          "id": "ea-1",
+          "prompt": "小林有 x 张卡片，又得到 6 张后共有 15 张，方程是？",
+          "options": ["x-6=15", "6x=15", "x+6=15", "x+15=6"],
+          "correctOptionIndex": 2,
+          "explanation": "原有数量加上新得到的 6 张等于 15 张。"
+        },
+        {
+          "id": "ea-2",
+          "prompt": "解方程 2x+4=14，x 等于？",
+          "options": ["4", "5", "6", "9"],
+          "correctOptionIndex": 1,
+          "explanation": "先减 4 得 2x=10，再除以 2 得 x=5。"
+        }
+      ]
+    },
+    {
+      "sectionId": "meeting-friends",
+      "questions": [
+        {
+          "id": "mf-1",
+          "prompt": "初次见面时，哪一句英语表达最合适？",
+          "options": ["Good night.", "Nice to meet you.", "See you yesterday.", "You're welcome."],
+          "correctOptionIndex": 1,
+          "explanation": "Nice to meet you. 用于初次见面时表达友好。"
+        },
+        {
+          "id": "mf-2",
+          "prompt": "“她是我的新同学”正确的英语表达是？",
+          "options": ["She is my new classmate.", "He is my new teacher.", "She are my friend.", "I am her classmate."],
+          "correctOptionIndex": 0,
+          "explanation": "主语 she 搭配 is，classmate 表示同学。"
+        }
+      ]
+    },
+    {
+      "sectionId": "school-map",
+      "questions": [
+        {
+          "id": "sm-1",
+          "prompt": "The library is ___ the classroom and the lab.",
+          "options": ["between", "under", "during", "without"],
+          "correctOptionIndex": 0,
+          "explanation": "between A and B 表示在 A 与 B 之间。"
+        },
+        {
+          "id": "sm-2",
+          "prompt": "询问“体育馆在哪里？”可以说？",
+          "options": ["What is the gym?", "Where is the gym?", "Who is the gym?", "How many gyms?"],
+          "correctOptionIndex": 1,
+          "explanation": "询问地点使用疑问词 where。"
+        }
+      ]
+    },
+    {
+      "sectionId": "daily-routine",
+      "questions": [
+        {
+          "id": "dr-1",
+          "prompt": "I usually ___ breakfast at seven.",
+          "options": ["have", "has", "having", "had"],
+          "correctOptionIndex": 0,
+          "explanation": "一般现在时中，主语 I 后使用动词原形 have。"
+        },
+        {
+          "id": "dr-2",
+          "prompt": "“每天”对应的英语短语是？",
+          "options": ["next day", "every day", "one day", "all day long"],
+          "correctOptionIndex": 1,
+          "explanation": "every day 是表示频率的时间短语，意思是每天。"
+        }
+      ]
+    },
+    {
+      "sectionId": "weekend-plan",
+      "questions": [
+        {
+          "id": "wp-1",
+          "prompt": "We are going to ___ a museum this Sunday.",
+          "options": ["visit", "visits", "visited", "visiting"],
+          "correctOptionIndex": 0,
+          "explanation": "be going to 后接动词原形。"
+        },
+        {
+          "id": "wp-2",
+          "prompt": "询问周末计划可以说？",
+          "options": ["What did you eat?", "What are you going to do?", "Where were you?", "How old are you?"],
+          "correctOptionIndex": 1,
+          "explanation": "be going to do 用于询问或表达计划。"
+        }
+      ]
+    },
+    {
+      "sectionId": "a-good-friend",
+      "questions": [
+        {
+          "id": "gf-1",
+          "prompt": "A good friend is someone who is usually ___.",
+          "options": ["helpful", "empty", "noisy", "late"],
+          "correctOptionIndex": 0,
+          "explanation": "helpful 表示乐于助人的，符合好朋友的常见品质。"
+        },
+        {
+          "id": "gf-2",
+          "prompt": "“分享”对应的英语单词是？",
+          "options": ["choose", "share", "close", "shape"],
+          "correctOptionIndex": 1,
+          "explanation": "share 可以表示与他人分享物品或想法。"
+        }
+      ]
+    },
+    {
+      "sectionId": "small-kindness",
+      "questions": [
+        {
+          "id": "sk-1",
+          "prompt": "Which action shows kindness?",
+          "options": ["Ignoring a lost child", "Helping someone carry books", "Breaking a promise", "Laughing at a mistake"],
+          "correctOptionIndex": 1,
+          "explanation": "主动帮助别人搬书体现了善意。"
+        },
+        {
+          "id": "sk-2",
+          "prompt": "The word “kindness” is closest in meaning to ___.",
+          "options": ["care", "anger", "fear", "noise"],
+          "correctOptionIndex": 0,
+          "explanation": "kindness 表达友善和关心，与 care 含义最接近。"
+        }
+      ]
+    },
+    {
+      "sectionId": "observe-question",
+      "questions": [
+        {
+          "id": "oq-1",
+          "prompt": "科学探究通常从哪一步开始？",
+          "options": ["直接下结论", "观察并提出问题", "抄写答案", "忽略现象"],
+          "correctOptionIndex": 1,
+          "explanation": "可靠的探究从细致观察和可检验的问题开始。"
+        },
+        {
+          "id": "oq-2",
+          "prompt": "下列哪个问题更适合进行科学探究？",
+          "options": ["哪种颜色最好看？", "光照时间会影响幼苗高度吗？", "谁最聪明？", "哪首歌最好听？"],
+          "correctOptionIndex": 1,
+          "explanation": "光照时间和幼苗高度都可以控制或测量。"
+        }
+      ]
+    },
+    {
+      "sectionId": "measure-record",
+      "questions": [
+        {
+          "id": "mr-1",
+          "prompt": "测量课桌长度时，最合适的工具是？",
+          "options": ["温度计", "刻度尺", "天平", "秒表"],
+          "correctOptionIndex": 1,
+          "explanation": "刻度尺用于测量物体的长度。"
+        },
+        {
+          "id": "mr-2",
+          "prompt": "为了让实验记录更可靠，应该怎么做？",
+          "options": ["只记录喜欢的结果", "多次测量并如实记录", "估计所有数值", "修改异常数据"],
+          "correctOptionIndex": 1,
+          "explanation": "重复测量并如实记录有助于发现误差和规律。"
+        }
+      ]
+    },
+    {
+      "sectionId": "cell",
+      "questions": [
+        {
+          "id": "ce-1",
+          "prompt": "构成生物体结构和功能的基本单位是？",
+          "options": ["细胞", "器官", "组织", "系统"],
+          "correctOptionIndex": 0,
+          "explanation": "细胞是生物体结构和功能的基本单位。"
+        },
+        {
+          "id": "ce-2",
+          "prompt": "观察细胞常用的仪器是？",
+          "options": ["望远镜", "显微镜", "放大镜", "测力计"],
+          "correctOptionIndex": 1,
+          "explanation": "细胞通常很微小，需要使用显微镜观察。"
+        }
+      ]
+    },
+    {
+      "sectionId": "ecosystem",
+      "questions": [
+        {
+          "id": "ec-1",
+          "prompt": "生态系统由生物成分和什么共同组成？",
+          "options": ["非生物环境", "单一动物", "所有城市", "实验仪器"],
+          "correctOptionIndex": 0,
+          "explanation": "生态系统包含生物群落及其生活的非生物环境。"
+        },
+        {
+          "id": "ec-2",
+          "prompt": "草→兔→鹰表示的是？",
+          "options": ["食物链", "水循环", "细胞分裂", "天气变化"],
+          "correctOptionIndex": 0,
+          "explanation": "箭头表示食物和能量传递关系，构成一条食物链。"
+        }
+      ]
+    }
+  ]
+}

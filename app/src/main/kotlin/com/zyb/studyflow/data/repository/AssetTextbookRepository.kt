@@ -2,6 +2,7 @@ package com.zyb.studyflow.data.repository
 
 import android.content.Context
 import com.zyb.studyflow.data.model.Chapter
+import com.zyb.studyflow.data.model.ExerciseQuestion
 import com.zyb.studyflow.data.model.Section
 import com.zyb.studyflow.data.model.Textbook
 import com.zyb.studyflow.data.model.TextbookEdition
@@ -14,11 +15,18 @@ class AssetTextbookRepository(
 ) : TextbookRepository {
 
     override suspend fun getTextbooks(): List<Textbook> = withContext(Dispatchers.IO) {
-        val json = context.assets.open(CATALOG_ASSET).bufferedReader().use { it.readText() }
-        parseCatalog(json)
+        val catalogJson = context.assets.open(CATALOG_ASSET).bufferedReader().use { it.readText() }
+        val exerciseJson = context.assets.open(EXERCISE_ASSET).bufferedReader().use { it.readText() }
+        parseCatalog(
+            json = catalogJson,
+            questionsBySection = parseExercises(exerciseJson),
+        )
     }
 
-    private fun parseCatalog(json: String): List<Textbook> {
+    private fun parseCatalog(
+        json: String,
+        questionsBySection: Map<String, List<ExerciseQuestion>>,
+    ): List<Textbook> {
         val books = JSONObject(json).getJSONArray("books")
         return List(books.length()) { bookIndex ->
             val book = books.getJSONObject(bookIndex)
@@ -49,6 +57,8 @@ class AssetTextbookRepository(
                                                     id = section.getString("id"),
                                                     title = section.getString("title"),
                                                     durationMinutes = section.getInt("durationMinutes"),
+                                                    questions = questionsBySection[section.getString("id")]
+                                                        .orEmpty(),
                                                 )
                                             }
                                         },
@@ -62,7 +72,35 @@ class AssetTextbookRepository(
         }
     }
 
+    private fun parseExercises(json: String): Map<String, List<ExerciseQuestion>> {
+        val sections = JSONObject(json).getJSONArray("sections")
+        return buildMap {
+            repeat(sections.length()) { sectionIndex ->
+                val section = sections.getJSONObject(sectionIndex)
+                val questions = section.getJSONArray("questions")
+                put(
+                    section.getString("sectionId"),
+                    List(questions.length()) { questionIndex ->
+                        val question = questions.getJSONObject(questionIndex)
+                        ExerciseQuestion(
+                            id = question.getString("id"),
+                            prompt = question.getString("prompt"),
+                            options = question.getJSONArray("options").let { options ->
+                                List(options.length()) { optionIndex ->
+                                    options.getString(optionIndex)
+                                }
+                            },
+                            correctOptionIndex = question.getInt("correctOptionIndex"),
+                            explanation = question.getString("explanation"),
+                        )
+                    },
+                )
+            }
+        }
+    }
+
     private companion object {
         const val CATALOG_ASSET = "catalog.json"
+        const val EXERCISE_ASSET = "exercises.json"
     }
 }
